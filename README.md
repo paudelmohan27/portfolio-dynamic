@@ -26,7 +26,7 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
 
 ## 📋 Project Structure
 
-\`\`\`
+
 portfolio/
 ├── app/                  # Next.js app directory
 │   ├── layout.tsx        # Root layout with metadata
@@ -43,7 +43,7 @@ portfolio/
 │   └── ui/               # UI components
 ├── public/               # Static assets
 └── tailwind.config.ts    # Tailwind configuration
-\`\`\`
+
 
 ## 🛠️ Installation and Setup
 
