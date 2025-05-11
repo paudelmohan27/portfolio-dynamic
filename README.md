@@ -26,7 +26,7 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
 
 ## 📋 Project Structure
 
-
+\`\`\`
 portfolio/
 ├── app/                  # Next.js app directory
 │   ├── layout.tsx        # Root layout with metadata
@@ -43,15 +43,15 @@ portfolio/
 │   └── ui/               # UI components
 ├── public/               # Static assets
 └── tailwind.config.ts    # Tailwind configuration
-
+\`\`\`
 
 ## 🛠️ Installation and Setup
 
 1. **Clone the repository**
 
 \`\`\`bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/hackermohan12/portfolio-dynamic.git
+cd portfolio-dynamic
 \`\`\`
 
 2. **Install dependencies**
@@ -137,4 +137,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐️ From [Mohan Paudel](https://github.com/hackermohan12)
-
