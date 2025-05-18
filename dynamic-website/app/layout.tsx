@@ -74,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="google-adsense-account" content="ca-pub-3883388900627889">
         <meta name="theme-color" content="#3b82f6" />
       </head>
       <body>
