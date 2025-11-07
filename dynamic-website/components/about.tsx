@@ -27,7 +27,7 @@ Email: paudelmohan761@gmail.com
 Location: Gaindakot, Nawalpur, Nepal
 
 EDUCATION
-Pulchowk Engineering - Computer Engineering (Running)
+Advanced College of  Engineering And Management - Computer Engineering (Running)
 Prerana College - Higher Secondary Education (2022-2024)
 
 SKILLS
