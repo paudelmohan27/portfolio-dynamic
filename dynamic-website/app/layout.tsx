@@ -1,8 +1,9 @@
-import type React from "react"
+import type { Metadata } from "next"
+import type { ReactNode } from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Mohan Paudel - Portfolio",
   description:
     "Personal portfolio of Mohan Paudel, a computer engineering student and web developer specializing in interactive web applications and responsive design.",
@@ -30,7 +31,8 @@ export const metadata = {
   },
   openGraph: {
     title: "Mohan Paudel - Portfolio",
-    description: "Personal portfolio of Mohan Paudel, a computer engineering student and web developer from Nepal.",
+    description:
+      "Personal portfolio of Mohan Paudel, a computer engineering student and web developer from Nepal.",
     url: "https://paudelmohan.com.np",
     siteName: "Mohan Paudel Portfolio",
     images: [
@@ -47,7 +49,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mohan Paudel - Portfolio",
-    description: "Personal portfolio of Mohan Paudel, a computer engineering student and web developer from Nepal.",
+    description:
+      "Personal portfolio of Mohan Paudel, a computer engineering student and web developer from Nepal.",
     images: ["/mohan.png"],
     creator: "@mohanpaudel",
   },
@@ -62,19 +65,36 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link
+          rel="icon"
+          href="/favicon-16x16.png"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
+          rel="icon"
+          href="/favicon-32x32.png"
+          type="image/png"
+          sizes="32x32"
+        />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="google-adsense-account" content="ca-pub-3883388900627889">
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-3883388900627889"
+        />
         <meta name="theme-color" content="#3b82f6" />
       </head>
       <body>
