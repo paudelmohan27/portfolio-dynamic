@@ -7,28 +7,39 @@ export const metadata: Metadata = {
   title: "Mohan Paudel - Portfolio",
   description:
     "Personal portfolio of Mohan Paudel, a computer engineering student and web developer specializing in interactive web applications and responsive design.",
+
   keywords: [
-    "web developer",
-    "portfolio",
     "Mohan Paudel",
-    "computer engineering",
+    "web developer",
     "frontend developer",
+    "computer engineering",
+    "portfolio",
     "Nepal",
     "interactive web",
     "responsive design",
   ],
+
   authors: [{ name: "Mohan Paudel", url: "https://paudelmohan.com.np" }],
   creator: "Mohan Paudel",
   publisher: "Mohan Paudel",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+
   metadataBase: new URL("https://paudelmohan.com.np"),
+
   alternates: {
     canonical: "/",
   },
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+
+  manifest: "/site.webmanifest",
+
   openGraph: {
     title: "Mohan Paudel - Portfolio",
     description:
@@ -46,6 +57,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Mohan Paudel - Portfolio",
@@ -54,6 +66,7 @@ export const metadata: Metadata = {
     images: ["/mohan.png"],
     creator: "@mohanpaudel",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -65,6 +78,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  viewport: {
+    themeColor: "#3b82f6",
+  },
+
   generator: "v0.dev",
 }
 
@@ -76,26 +94,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="icon"
-          href="/favicon-16x16.png"
-          type="image/png"
-          sizes="16x16"
-        />
-        <link
-          rel="icon"
-          href="/favicon-32x32.png"
-          type="image/png"
-          sizes="32x32"
-        />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* Google AdSense (non-metadata, must stay here) */}
         <meta
           name="google-adsense-account"
           content="ca-pub-3883388900627889"
         />
-        <meta name="theme-color" content="#3b82f6" />
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
