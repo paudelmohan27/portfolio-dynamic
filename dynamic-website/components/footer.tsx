@@ -60,7 +60,7 @@ export default function Footer() {
                 <motion.a
                   whileHover={{ y: -5, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  href="https://github.com/hackermohan12"
+                  href="https://github.com/paudelmohan27"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -71,7 +71,7 @@ export default function Footer() {
                 <motion.a
                   whileHover={{ y: -5, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/paudelmohan27"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
