@@ -73,8 +73,8 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center py-20 md:py-32 overflow-hidden">
       <ParticleBackground
         className="opacity-40 dark:opacity-20"
-        particleColor="rgba(var(--primary), 0.3)"
-        lineColor="rgba(var(--primary), 0.1)"
+        particleColor="hsl(0 0% 9% / 0.3)"
+        lineColor="hsl(0 0% 9% / 0.1)"
         particleCount={100}
       />
 
@@ -121,22 +121,24 @@ export default function Hero() {
             <motion.div variants={socialVariants} className="flex gap-4 mt-8">
               <motion.a
                 variants={socialItemVariants}
-                href="https://github.com/hackermohan12"
+                href="https://github.com/paudelmohan27"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
                 whileHover={{ y: -3 }}
+                aria-label="GitHub"
               >
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </motion.a>
               <motion.a
                 variants={socialItemVariants}
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/paudelmohan27"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
                 whileHover={{ y: -3 }}
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
@@ -146,6 +148,7 @@ export default function Hero() {
                 href="mailto:paudelmohan761@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-all hover:scale-110"
                 whileHover={{ y: -3 }}
+                aria-label="Email"
               >
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
@@ -178,6 +181,7 @@ export default function Hero() {
           href="#about"
           onClick={(e) => handleScroll(e, "about")}
           className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
+          aria-label="Scroll down to about section"
         >
           <span className="text-sm mb-2">Scroll Down</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
