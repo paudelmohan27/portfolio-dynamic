@@ -13,54 +13,54 @@ export default function CV() {
   })
 
   // Function to generate and download CV
-  const downloadCV = () => {
-    // Create a simple text version of the CV data
-    const cvData = `
-MOHAN PAUDEL
-Computer Engineering Student
---------------------------
+//   const downloadCV = () => {
+//     // Create a simple text version of the CV data
+//     const cvData = `
+// MOHAN PAUDEL
+// Computer Engineering Student
+// --------------------------
 
-CONTACT
-Phone: 9748202957
-Email: paudelmohan761@gmail.com
-Location: Gaindakot, Nawalpur, Nepal
+// CONTACT
+// Phone: 9748202957
+// Email: paudelmohan761@gmail.com
+// Location: Gaindakot, Nawalpur, Nepal
 
-EDUCATION
-Pulchowk Engineering - Computer Engineering (Running)
-Prerana College - Higher Secondary Education (2022-2024)
+// EDUCATION
+// Advanced College Of Engineering And Management - Computer Engineering (Running)
+// Prerana College - Higher Secondary Education (2022-2024)
 
-SKILLS
-- Web Designing
-- Hosting
-- Competitive Programming
+// SKILLS
+// - Web Designing
+// - Hosting
+// - Competitive Programming
 
-PROJECTS
-- Cricket Insight Nepal: A comprehensive cricket news and scores platform
-- Interactive Whiteboard: A collaborative digital canvas application
-- Calculator Application: A sleek calculator with arithmetic operations
-    `
+// PROJECTS
+// - Cricket Insight Nepal: A comprehensive cricket news and scores platform
+// - Interactive Whiteboard: A collaborative digital canvas application
+// - Calculator Application: A sleek calculator with arithmetic operations
+//     `
 
-    // Create a Blob with the CV data
-    const blob = new Blob([cvData], { type: "text/plain" })
+//     // Create a Blob with the CV data
+//     const blob = new Blob([cvData], { type: "text/plain" })
 
-    // Create a URL for the Blob
-    const url = URL.createObjectURL(blob)
+//     // Create a URL for the Blob
+//     const url = URL.createObjectURL(blob)
 
-    // Create a link element
-    const link = document.createElement("a")
-    link.href = url
-    link.download = "mohan-paudel-cv.txt"
+//     // Create a link element
+//     const link = document.createElement("a")
+//     link.href = url
+//     link.download = "mohan-paudel-cv.txt"
 
-    // Append the link to the body
-    document.body.appendChild(link)
+//     // Append the link to the body
+//     document.body.appendChild(link)
 
-    // Click the link to trigger the download
-    link.click()
+//     // Click the link to trigger the download
+//     link.click()
 
-    // Clean up
-    document.body.removeChild(link)
-    URL.revokeObjectURL(url)
-  }
+//     // Clean up
+//     document.body.removeChild(link)
+//     URL.revokeObjectURL(url)
+//   }
 
   return (
     <section id="cv" className="py-20 bg-muted/30 relative overflow-hidden">
@@ -237,7 +237,7 @@ PROJECTS
                   <div className="space-y-4">
                     <div className="group">
                       <div className="flex justify-between">
-                        <h4 className="font-medium group-hover:text-primary transition-colors">Pulchowk Engineering</h4>
+                        <h4 className="font-medium group-hover:text-primary transition-colors">Advanced College Of Engineering And Management</h4>
                         <span className="text-xs text-muted-foreground">Present</span>
                       </div>
                       <p className="text-sm text-muted-foreground">Computer Engineering (Running)</p>
@@ -304,8 +304,11 @@ PROJECTS
           </div>
 
           <div className="p-6 bg-muted/30 flex justify-center border-t border-border/50">
-            <Button onClick={downloadCV} className="group">
-              <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" /> Download CV
+            <Button asChild>
+              <a href="/Mohan-Paudel_CV.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </a>
             </Button>
           </div>
         </motion.div>
