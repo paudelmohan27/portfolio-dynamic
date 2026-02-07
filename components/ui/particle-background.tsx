@@ -28,6 +28,7 @@ export function ParticleBackground({
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+    const canvasEl = canvas
 
     const ctx = canvas.getContext("2d")
     if (!ctx) return
@@ -44,18 +45,18 @@ export function ParticleBackground({
       size: number
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * canvasEl.width
+        this.y = Math.random() * canvasEl.height
         this.directionX = Math.random() * speed * 2 - speed
         this.directionY = Math.random() * speed * 2 - speed
         this.size = Math.random() * particleSize + 0.5
       }
 
       update() {
-        if (this.x > canvas.width || this.x < 0) {
+        if (this.x > canvasEl.width || this.x < 0) {
           this.directionX = -this.directionX
         }
-        if (this.y > canvas.height || this.y < 0) {
+        if (this.y > canvasEl.height || this.y < 0) {
           this.directionY = -this.directionY
         }
 
@@ -74,8 +75,8 @@ export function ParticleBackground({
 
     // Set canvas dimensions
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvasEl.width = window.innerWidth
+      canvasEl.height = window.innerHeight
       initParticles()
     }
 
@@ -107,8 +108,8 @@ export function ParticleBackground({
     }
 
     function animate() {
-      if (!ctx || !canvas) return
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      if (!ctx) return
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
 
       particles.forEach((particle) => {
         particle.update()
