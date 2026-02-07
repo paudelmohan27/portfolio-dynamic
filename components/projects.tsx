@@ -11,6 +11,7 @@ import CricketInsight from "@/components/projects/cricket-insight"
 import WhiteboardApp from "@/components/projects/whiteboard-app"
 import CalculatorApp from "@/components/projects/calculator-app"
 import QuizApp from "@/components/projects/quiz-app"
+import IdCardGenerator from "@/components/projects/id-card-generator"
 import { ScrollAnimation } from "@/components/ui/scroll-animation"
 
 // Project data
@@ -62,6 +63,18 @@ const projectsData = [
     githubUrl: "https://github.com/hackermohan12/educational-resources",
     category: "web",
     component: <QuizApp />,
+  },
+  {
+    id: 5,
+    title: "ID Card Generator",
+    description:
+      "A fast, clean ID card generator that turns user details into consistent, printable ID card layouts with a focused, simple workflow.",
+    image: "/idcardthumbnail.jpg",
+    tags: ["Web", "JavaScript", "UI", "Responsive Design"],
+    liveUrl: "https://idcard.paudelmohan.com.np",
+    githubUrl: "https://github.com/paudelmohan27/idcardv2",
+    category: "web",
+    component: <IdCardGenerator />,
   },
 ]
 
