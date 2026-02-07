@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { ParticleBackground } from "@/components/ui/particle-background";
@@ -23,7 +23,7 @@ export default function Hero() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+      transition: { duration: 0.5, ease: cubicBezier(0.25, 0.1, 0.25, 1) },
     },
   };
 
@@ -32,7 +32,11 @@ export default function Hero() {
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.5 },
+      transition: {
+        duration: 0.8,
+        ease: cubicBezier(0.25, 0.1, 0.25, 1),
+        delay: 0.5,
+      },
     },
   };
 
@@ -52,7 +56,7 @@ export default function Hero() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
+      transition: { duration: 0.5, ease: cubicBezier(0.25, 0.1, 0.25, 1) },
     },
   };
 
