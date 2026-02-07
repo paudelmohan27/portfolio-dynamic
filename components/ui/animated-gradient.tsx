@@ -16,6 +16,7 @@ export function AnimatedGradient({
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+    const canvasEl = canvas
 
     const ctx = canvas.getContext("2d")
     if (!ctx) return
@@ -35,8 +36,8 @@ export function AnimatedGradient({
       color: string
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * canvasEl.width
+        this.y = Math.random() * canvasEl.height
         this.size = Math.random() * 100 + 50
         this.speedX = Math.random() * 0.2 - 0.1
         this.speedY = Math.random() * 0.2 - 0.1
@@ -47,8 +48,8 @@ export function AnimatedGradient({
         this.x += this.speedX
         this.y += this.speedY
 
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1
+        if (this.x < 0 || this.x > canvasEl.width) this.speedX *= -1
+        if (this.y < 0 || this.y > canvasEl.height) this.speedY *= -1
       }
 
       draw() {
@@ -62,8 +63,8 @@ export function AnimatedGradient({
 
     // Set canvas dimensions
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvasEl.width = window.innerWidth
+      canvasEl.height = window.innerHeight
       initParticles()
     }
 
@@ -75,17 +76,22 @@ export function AnimatedGradient({
     }
 
     function animate() {
-      if (!ctx || !canvas) return
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      if (!ctx) return
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)
 
       // Create gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+      const gradient = ctx.createLinearGradient(
+        0,
+        0,
+        canvasEl.width,
+        canvasEl.height
+      )
       gradient.addColorStop(0, "rgba(59, 130, 246, 0.01)")
       gradient.addColorStop(0.5, "rgba(139, 92, 246, 0.01)")
       gradient.addColorStop(1, "rgba(236, 72, 153, 0.01)")
 
       ctx.fillStyle = gradient
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      ctx.fillRect(0, 0, canvasEl.width, canvasEl.height)
 
       // Draw and update particles
       ctx.globalCompositeOperation = "screen"
@@ -97,7 +103,7 @@ export function AnimatedGradient({
 
       // Apply blur
       ctx.filter = "blur(100px)"
-      ctx.drawImage(canvas, 0, 0)
+      ctx.drawImage(canvasEl, 0, 0)
       ctx.filter = "none"
 
       animationFrameId = requestAnimationFrame(animate)
