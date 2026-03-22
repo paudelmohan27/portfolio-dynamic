@@ -21,7 +21,7 @@ const projectsData = [
     title: "CricVerse",
     description:
       "A feature-rich cricket platform delivering live scores, ICC rankings, match schedules, and real-time updates for cricket fans in Nepal and around the world.",
-    image: "/cricket-insight-thumbnail.png",
+    image: "/cricverse.jpg",
     tags: ["Web", "HTML", "CSS", "JavaScript", "Responsive Design"],
     liveUrl: "https://mohanpaudel761.com.np/",
     githubUrl: "https://github.com/hackermohan12/ipl-project-",
