@@ -10,7 +10,7 @@ export default function CricVerse() {
     <div className="w-full max-w-4xl mx-auto">
       <div className="relative w-full aspect-video rounded-lg overflow-hidden mb-6">
         <img
-          src="/cricket-insight-thumbnail.png"
+          src="/cricverse.jpg"
           alt="CricVerse Website"
           className="w-full h-full object-cover"
         />
