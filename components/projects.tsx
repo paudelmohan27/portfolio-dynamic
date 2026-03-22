@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
-import CricketInsight from "@/components/projects/cricket-insight"
+import CricVerse from "@/components/projects/cricverse"
 import WhiteboardApp from "@/components/projects/whiteboard-app"
 import CalculatorApp from "@/components/projects/calculator-app"
 import QuizApp from "@/components/projects/quiz-app"
@@ -18,15 +18,15 @@ import { ScrollAnimation } from "@/components/ui/scroll-animation"
 const projectsData = [
   {
     id: 1,
-    title: "Cricket Insight Nepal",
+    title: "CricVerse",
     description:
-      "A comprehensive cricket news and scores platform focused on providing real-time updates, match schedules, and in-depth information for cricket enthusiasts in Nepal and beyond.",
+      "A feature-rich cricket platform delivering live scores, ICC rankings, match schedules, and real-time updates for cricket fans in Nepal and around the world.",
     image: "/cricket-insight-thumbnail.png",
     tags: ["Web", "HTML", "CSS", "JavaScript", "Responsive Design"],
-    liveUrl: "https://mohanpaudel761.com.np",
+    liveUrl: "https://mohanpaudel761.com.np/",
     githubUrl: "https://github.com/hackermohan12/ipl-project-",
     category: "web",
-    component: <CricketInsight />,
+    component: <CricVerse />,
   },
   {
     id: 2,
