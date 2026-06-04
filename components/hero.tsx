@@ -1,12 +1,22 @@
 "use client";
 
 import type React from "react";
-import { cubicBezier, motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { cubicBezier, motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { ParticleBackground } from "@/components/ui/particle-background";
 
 export default function Hero() {
+  const roles = ["Computer Engineering Student", "Frontend Web Developer", "Problem Solver"];
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -96,10 +106,19 @@ export default function Hero() {
             animate="visible"
             className="space-y-6"
           >
-            <motion.div variants={itemVariants}>
-              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                Computer Engineering Student
-              </span>
+            <motion.div variants={itemVariants} className="h-8 mb-4">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={roleIndex}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.3 }}
+                  className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium"
+                >
+                  {roles[roleIndex]}
+                </motion.span>
+              </AnimatePresence>
             </motion.div>
 
             <motion.h1

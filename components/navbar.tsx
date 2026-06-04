@@ -88,6 +88,7 @@ export default function Navbar() {
             <NavLink href="#about" label="About" onClick={(e) => handleScroll(e, "about")} />
             <NavLink href="#projects" label="Projects" onClick={(e) => handleScroll(e, "projects")} />
             <NavLink href="#cv" label="CV" onClick={(e) => handleScroll(e, "cv")} />
+            <NavLink href="#contact" label="Contact" onClick={(e) => handleScroll(e, "contact")} />
             <motion.div whileHover={{ rotate: 180 }} transition={{ duration: 0.5 }}>
               <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -154,6 +155,7 @@ export default function Navbar() {
               <MobileNavLink href="#about" label="About" onClick={(e) => handleScroll(e, "about")} />
               <MobileNavLink href="#projects" label="Projects" onClick={(e) => handleScroll(e, "projects")} />
               <MobileNavLink href="#cv" label="CV" onClick={(e) => handleScroll(e, "cv")} />
+              <MobileNavLink href="#contact" label="Contact" onClick={(e) => handleScroll(e, "contact")} />
             </nav>
           </motion.div>
         )}

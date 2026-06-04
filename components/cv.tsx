@@ -305,7 +305,7 @@ export default function CV() {
 
           <div className="p-6 bg-muted/30 flex justify-center border-t border-border/50">
             <Button asChild>
-              <a href="/Mohan-Paudel_CV.pdf" download>
+              <a href="/Mohan_CV.pdf" download="Mohan_CV.pdf">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>

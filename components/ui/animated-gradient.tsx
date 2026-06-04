@@ -101,11 +101,6 @@ export function AnimatedGradient({
       })
       ctx.globalCompositeOperation = "source-over"
 
-      // Apply blur
-      ctx.filter = "blur(100px)"
-      ctx.drawImage(canvasEl, 0, 0)
-      ctx.filter = "none"
-
       animationFrameId = requestAnimationFrame(animate)
     }
 
@@ -123,7 +118,7 @@ export function AnimatedGradient({
     <div className={`relative overflow-hidden ${className}`}>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30 dark:opacity-20 pointer-events-none"
+        className="absolute inset-0 w-full h-full opacity-30 dark:opacity-20 pointer-events-none blur-[100px]"
       />
       {children}
     </div>

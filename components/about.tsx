@@ -13,55 +13,7 @@ export default function About() {
     threshold: 0.1,
   })
 
-  // Add this function at the beginning of the component, after the useInView hook
-  const downloadCV = () => {
-    // Create a simple text version of the CV data
-    const cvData = `
-MOHAN PAUDEL
-Computer Engineering Student
---------------------------
 
-CONTACT
-Phone: 9748202957
-Email: paudelmohan761@gmail.com
-Location: Gaindakot, Nawalpur, Nepal
-
-EDUCATION
-Advanced College of  Engineering And Management - Computer Engineering (Running)
-Prerana College - Higher Secondary Education (2022-2024)
-
-SKILLS
-- Web Designing
-- Hosting
-- Competitive Programming
-
-PROJECTS
-- Cricket Insight Nepal: A comprehensive cricket news and scores platform
-- Interactive Whiteboard: A collaborative digital canvas application
-- Calculator Application: A sleek calculator with arithmetic operations
-    `
-
-    // Create a Blob with the CV data
-    const blob = new Blob([cvData], { type: "text/plain" })
-
-    // Create a URL for the Blob
-    const url = URL.createObjectURL(blob)
-
-    // Create a link element
-    const link = document.createElement("a")
-    link.href = url
-    link.download = "mohan-paudel-cv.txt"
-
-    // Append the link to the body
-    document.body.appendChild(link)
-
-    // Click the link to trigger the download
-    link.click()
-
-    // Clean up
-    document.body.removeChild(link)
-    URL.revokeObjectURL(url)
-  }
 
   return (
     <AnimatedGradient className="py-20">
@@ -152,8 +104,10 @@ PROJECTS
             </div>
 
             <ScrollAnimation type="fade" delay={0.7} className="mt-10 flex justify-center">
-              <Button variant="outline" onClick={downloadCV} className="group">
-                <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" /> Download CV
+              <Button variant="outline" asChild className="group">
+                <a href="/Mohan_CV.pdf" download="Mohan_CV.pdf">
+                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" /> Download CV
+                </a>
               </Button>
             </ScrollAnimation>
           </motion.div>

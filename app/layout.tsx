@@ -2,6 +2,10 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Inter } from "next/font/google"
+import { Toaster } from "@/components/ui/toaster"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
   title: "Mohan Paudel - Portfolio",
@@ -100,9 +104,10 @@ export default function RootLayout({
           content="ca-pub-3883388900627889"
         />
       </head>
-      <body>
+      <body className={`${inter.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

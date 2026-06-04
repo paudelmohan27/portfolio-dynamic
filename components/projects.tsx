@@ -12,6 +12,7 @@ import WhiteboardApp from "@/components/projects/whiteboard-app"
 import CalculatorApp from "@/components/projects/calculator-app"
 import QuizApp from "@/components/projects/quiz-app"
 import IdCardGenerator from "@/components/projects/id-card-generator"
+import StudyTracker from "@/components/projects/study-tracker"
 import { ScrollAnimation } from "@/components/ui/scroll-animation"
 
 // Project data
@@ -75,6 +76,18 @@ const projectsData = [
     githubUrl: "https://github.com/paudelmohan27/idcardv2",
     category: "web",
     component: <IdCardGenerator />,
+  },
+  {
+    id: 6,
+    title: "Study Tracker",
+    description:
+      "A comprehensive study tracking application that helps students organize study sessions, log study hours, schedule exams, and visualize progress analytics.",
+    image: "/study-tracker-thumbnail.png",
+    tags: ["Web", "React", "TailwindCSS", "Recharts", "LocalStorage"],
+    liveUrl: "https://tracker.paudelmohan.com.np/",
+    githubUrl: "https://github.com/paudelmohan27/StudyTracker",
+    category: "web",
+    component: <StudyTracker />,
   },
 ]
 
